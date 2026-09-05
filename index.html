@@ -1133,7 +1133,27 @@ footer {
 
         </div>
 
+<div class="ambulance">
+    <div class="ambulance-light"></div>
 
+    <div class="ambulance-body">
+
+        <div class="ambulance-window">
+            <div class="window-line"></div>
+        </div>
+
+        <div class="ambulance-cross">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="ambulance-stripe"></div>
+
+        <div class="ambulance-wheel wheel-left"></div>
+        <div class="ambulance-wheel wheel-right"></div>
+
+    </div>
+</div>
 
         <div class="card">
 
@@ -1311,7 +1331,144 @@ footer {
 
 <footer>
 
-    © 2026 NAFAS R Ambulance Services
+    © 2026 NAFAS R Ambulance Services.ambulance{
+    position:relative;
+    width:520px;
+    height:250px;
+}
+
+.ambulance-body{
+    position:absolute;
+    width:470px;
+    height:175px;
+    left:20px;
+    top:45px;
+    background:linear-gradient(
+        145deg,
+        #ffffff,
+        #e8ebee
+    );
+    border-radius:20px 35px 15px 15px;
+    box-shadow:
+        0 25px 45px rgba(0,0,0,.5),
+        0 0 35px rgba(255,0,40,.15);
+}
+
+.ambulance-body::after{
+    content:"";
+    position:absolute;
+    right:-30px;
+    top:50px;
+    width:45px;
+    height:105px;
+    background:#dfe3e7;
+    border-radius:0 20px 15px 0;
+}
+
+.ambulance-window{
+    position:absolute;
+    right:35px;
+    top:18px;
+    width:180px;
+    height:70px;
+    background:linear-gradient(
+        135deg,
+        #07111e,
+        #244d70
+    );
+    border:5px solid #c4c9ce;
+    border-radius:12px;
+}
+
+.window-line{
+    position:absolute;
+    left:50%;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#c4c9ce;
+}
+
+.ambulance-stripe{
+    position:absolute;
+    left:0;
+    top:105px;
+    width:100%;
+    height:22px;
+    background:#e51b3e;
+}
+
+.ambulance-cross{
+    position:absolute;
+    left:75px;
+    top:43px;
+    width:65px;
+    height:65px;
+    z-index:2;
+}
+
+.ambulance-cross span:first-child{
+    position:absolute;
+    width:20px;
+    height:65px;
+    left:23px;
+    background:#e51b3e;
+    border-radius:3px;
+}
+
+.ambulance-cross span:last-child{
+    position:absolute;
+    width:65px;
+    height:20px;
+    top:23px;
+    background:#e51b3e;
+    border-radius:3px;
+}
+
+.ambulance-wheel{
+    position:absolute;
+    bottom:-32px;
+    width:68px;
+    height:68px;
+    background:#080a0d;
+    border:11px solid #30363d;
+    border-radius:50%;
+    z-index:5;
+}
+
+.wheel-left{
+    left:65px;
+}
+
+.wheel-right{
+    right:55px;
+}
+
+.ambulance-light{
+    position:absolute;
+    left:220px;
+    top:25px;
+    width:45px;
+    height:15px;
+    border-radius:6px;
+    background:#147cff;
+    box-shadow:
+        65px 0 #ff173c,
+        0 0 20px #147cff,
+        65px 0 20px #ff173c;
+    z-index:10;
+    animation:ambulanceFlash .7s infinite alternate;
+}
+
+@keyframes ambulanceFlash{
+    from{
+        opacity:.35;
+    }
+    to{
+        opacity:1;
+    }
+}
+   
 
 </footer>
 
